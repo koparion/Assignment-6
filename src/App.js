@@ -1,5 +1,5 @@
 // import logo from './logo.svg';
-import './App.css';
+// import './App.css';
 import React ,{ Component } from 'react';
 import ZipCodes from './components/zipsearch'
 import ReactDOM from 'react-dom';

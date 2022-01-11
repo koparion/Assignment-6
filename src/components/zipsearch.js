@@ -17,26 +17,24 @@ function ZipCodes(props)
         // {
         //     return <h3>not found</h3>
         // }
+        
 
 
     return (
         <>
         <div >
              <label for="zipsearch">Enter Zip Code</label>
-             <form onSubmit={setItem}>
                 <input id="zip" type="number"></input>
-                <button type="submit" value="submit">Submit</button>
-             </form>
+                <button type="submit" value="Submit">Submit</button>
+         
         {item.map((element) => {
                     return (
-                       <ul className="d-inline-flex list-group list-group-flush">
-                                <li className="list-group-item">Zip: {element.target.State}</li>
-                                <li className="list-group-item">City: {element.target.City}</li>
-                                <li className="list-group-item">Location: {element.target.Lat}, {element.target.Long}</li>
-                                <li className="list-group-item">Wages: {element.target.TotalWages}</li>
-                                console.log({element.TotalWages});
+                       <ul className="d-inline-flex list-group list-group">
+                                <li onChange="zip" className="list-group-item">Zip: {element.State}</li>
+                                <li className="list-group-item">City: {element.City}</li>
+                                <li className="list-group-item">Location: {element.Lat}, {element.Long}</li>
+                                <li className="list-group-item">Wages: {element.TotalWages}</li>
                             </ul>
-                        
                     );
                 })}
             </div>
