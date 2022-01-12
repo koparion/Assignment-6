@@ -32,7 +32,7 @@ function ZipCodes(props) {
 
         {list.map((element) => {
           return (
-            <div class="d-flex justify-content-center ">
+            <div className="d-flex justify-content-center ">
               <ul className="list-group list-group border m-3">
                 <div className="text-start">
                   <h5
