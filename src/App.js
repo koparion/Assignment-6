@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import React, { useState } from "react";
+import CitySearch from "./components/citysearch";
+import ReactDOM from "react-dom";
 
 function App() {
+  const [city, setCity] = useState([]);
+  const [list, setList] = useState([]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="container bg-dark text-center text-white justify-content-center p-4 ">
+        <h1>City Search</h1>
+      </div>
+      <div className="container text-center">
+        <CitySearch
+          city={city}
+          setCity={setCity}
+          list={list}
+          setList={setList}
+        />
+      </div>
+    </>
   );
 }
 
 export default App;
+ReactDOM.render(<App />, document.getElementById("root"));
